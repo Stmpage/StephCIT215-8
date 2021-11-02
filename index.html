@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:src="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipping Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div>
+    <input type="text" v-model="questionInput" placeholder="New Question"/>
+    <br>
+    <input type="text" v-model="answerInput" placeholder="New Answer"/>
+    <br>
+    <input type="radio" id="one" value="history" v-model="categoryInput">
+    <label for="one">
+        History
+    </label>
+
+    <input type="radio" id="two" value="math" v-model="categoryInput">
+    <label for="two">
+        Math
+    </label>
+
+    <input type="radio" id="three" value="science" v-model="categoryInput">
+    <label for="three">
+        Science
+    </label>
+    <br>
+    <button v-on:click="addCard">
+        Add Card
+    </button>
+
+    <div id="flashcards-app">
+        <div class="container">
+            <div class="card" onclick="flip()">
+                <div class="top history" ></div>
+                <div class="side1">
+                    <h1>What year was IUPUI founded?</h1>
+                </div>
+                <div class="side2">
+                    <h1>1969</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card"  onclick="flip()">
+                <div class="top math" ></div>
+                <div class="side1">
+                    <h1>What is 2+2?</h1>
+                </div>
+                <div class="side2">
+                    <h1>Fish</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card" onclick="flip()">
+                <div class="top science" ></div>
+                <div class="side1">
+                    <h1>Is mayonnaise an instrument?</h1>
+                </div>
+                <div class="side2">
+                    <h1>No</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</div>
+</body>
+</html>

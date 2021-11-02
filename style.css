@@ -1,0 +1,76 @@
+#flashcards-app{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.card{
+    height:350px;
+    width:250px;
+    position:relative;
+    font-family: Roboto, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    box-shadow:rgba(0,0,0,0.5) 4px 4px 16px;
+    overflow:hidden;
+    margin-left:20px;
+    cursor:pointer;
+    transition: all 1s linear;
+    transform-style:preserve-3d;
+}
+
+.top{
+    height:40px;
+    width:100%;
+    border-bottom:solid 2px;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.side1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.side2{
+    position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:100%;
+    transform: rotateY(180deg);
+}
+
+.side1, .side2{
+    backface-visibility: hidden;
+}
+
+.container:hover .card{
+    transform: rotateY(180deg);
+}
+
+.hide{
+    display:none;
+}
+
+.history{
+    border-color:purple;
+}
+
+.math{
+    border-color:red;
+}
+
+.science{
+    border-color:green;
+}
